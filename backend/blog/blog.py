@@ -11,7 +11,7 @@ blog = Blueprint("blog", __name__, template_folder="blog")
 
 @blog.route('/blog/create_blog', methods = ['POST'])
 def create_blog():
-    try:
+    # try:
 
         req = request.form
         title = req['title']
@@ -24,6 +24,7 @@ def create_blog():
         dt_object = DT.datetime.now()
         str_timestamp = str(dt_object.strftime('%d%m%Y%H%M%S%f'))
         filename = str_timestamp+filename
+
         image.save(filename)        
         bucket = storage.bucket("education-database-dfa68.appspot.com")
         
@@ -44,10 +45,10 @@ def create_blog():
         BLOG.document().set(blog_obj)
         return jsonify({'status' : True , 'response' : blog_obj})
     
-    except Exception as err:
-        error = get_error_obj(sys.exc_info(), err)
-        print(traceback.format_exc())
-        return jsonify({"status": False,"response":error}), 400
+    # except Exception as err:
+    #     error = get_error_obj(sys.exc_info(), err)
+    #     print(traceback.format_exc())
+    #     return jsonify({"status": False,"response":error}), 400
     
     
 
@@ -79,7 +80,7 @@ def update_blog():
     
 
 @blog.route('/blog/delete_blog', methods = ['DELETE'])
-def delete_blog_blog():
+def delete_blog():
     try:
         req = request.json
         blog_id = req['blog_id']
@@ -92,7 +93,8 @@ def delete_blog_blog():
         return jsonify({"status": False,"response":error}), 400
     
     
-    
+def trim_content(content, lines=5):
+    return '\n'.join(content.split('\n')[:lines])
 
     
 @blog.route('/blog/blog_list',methods=['GET']) 
@@ -103,9 +105,28 @@ def blog_list():
         blog_list = []
         for blog in blogs:
             blog_dict = blog.to_dict()
+            blog_dict["id"] = blog.id
+            blog_dict["content"] = blog_dict["content"][:300]+"..."
             blog_list.append(blog_dict)
             
         return jsonify({'status' : True , 'response' : blog_list})
+    
+    except Exception as err:
+        error = get_error_obj(sys.exc_info(), err)
+        print(traceback.format_exc())
+        return jsonify({"status": False,"response":error}), 400
+    
+
+
+    
+@blog.route('/blog/blog_readmore',methods=['GET']) 
+def blog_readmore(): 
+    try:     
+
+        id=request.args.get('id')
+        blog = BLOG.document(id).get().to_dict()
+            
+        return jsonify({'status' : True , 'response' : blog})
     
     except Exception as err:
         error = get_error_obj(sys.exc_info(), err)
