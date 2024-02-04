@@ -409,14 +409,14 @@ nav{
 
 }
 
-.pro-links i{
+.pro-links .icon{
    padding: 10px 13px;
    border: 1px solid rgb(21, 21, 100);
    cursor: pointer;
    transition: 0.3s ease;
 }
 
-.pro-links i:hover{
+.pro-links .icon:hover{
    background: rgb(21, 21, 100);
    color: #fff;
    border: 1px solid rgb(21, 21, 100);
@@ -556,16 +556,45 @@ footer .copyright .pro-links i:hover{
    padding: 8vw 8vw 2vw 8vw;
 }
 
+
 #about-container .about-img{
    width: 60%;
    padding-right: 60px;
 
 }
 
+
+
 #about-container .about-img img{
    width: 100%;
+}
 
 
+
+#about-login{
+   display: flex;
+   align-items: center;
+   padding: 8vw 8vw 2vw 8vw;
+}
+
+
+#about-signup{
+   display: flex;
+   align-items: center;
+   padding: 8vw 8vw 2vw 8vw;
+}
+#about-container .login-img{
+   width: 60%;
+   padding-right: 60px;
+
+
+}
+
+#about-container .login-img img{
+   width: 10%;
+}
+#about-container .login-text{
+   width: 40%;
 }
 #about-container .about-text{
    width: 40%;
@@ -1297,11 +1326,12 @@ footer .copyright .pro-links {
 .login-main-container {
    font-family: 'Arial', sans-serif;
    margin: 0;
+   
    display: flex;
    align-items: center;
    justify-content: center;
-   height: 100vh;
-   background-image: url('images/a.jpg'); /* Replace with your image URL */
+   height: 5vh;
+   /* background-image: url('images/a.jpg');  */
    background-size: cover;
  }
  
@@ -1309,16 +1339,17 @@ footer .copyright .pro-links {
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 100%;
+   height: 10%;
  }
  
  .login-form-container {
    width: 400px;
    padding: 30px;
-   background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background */
+   background-color: rgba(205, 189, 229, 0.9); /* Add a semi-transparent white background */
    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
    border-radius: 10px;
    text-align: center;
+   margin-left: 100px;
  }
  
  .logo {
@@ -1336,6 +1367,8 @@ footer .copyright .pro-links {
    display: flex;
    flex-direction: column;
  }
+
+ 
  
  .login-label {
    text-align: left;
@@ -1375,4 +1408,103 @@ footer .copyright .pro-links {
  
  .login-link:hover {
    text-decoration: underline;
+ }
+
+
+ .signup-main-container {
+   font-family: 'Arial', sans-serif;
+   margin: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 5vh;
+   /* background-color: rgba(205, 189, 229, 0.9); */
+   background-size: cover;
+ }
+ 
+ .signup-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 10%;
+ }
+ 
+ .signup-form-container {
+   width: 400px;
+   padding: 30px;
+   background-color: rgba(205, 189, 229, 0.9); /* Add a semi-transparent white background */
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   text-align: center;
+   margin-left: 100px;
+ }
+ 
+ .logo {
+   width: 80px;
+   margin-bottom: 20px;
+ }
+ 
+ .heading {
+   font-size: 28px;
+   color: #333;
+   margin-bottom: 20px;
+ }
+ 
+ .signup-form {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .signup-label {
+   text-align: left;
+   margin-bottom: 5px;
+   color: #555;
+ }
+ 
+ .signup-input {
+   padding: 12px;
+   margin-bottom: 20px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 16px;
+ }
+ 
+ .signup-button {
+   background-color: #3498db;
+   color: white;
+   padding: 15px;
+   border: none;
+   border-radius: 5px;
+   font-size: 18px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+ }
+ 
+ .button:hover {
+   background-color: #217dbb;
+ }
+ 
+ .signup-link {
+   color: #3498db;
+   text-decoration: none;
+   margin-top: 10px;
+   font-size: 14px;
+ }
+ 
+ .signup-link:hover {
+   text-decoration: underline;
+ }
+
+
+ 
+ 
+ .icon {
+   color: #4A4A88;
+   margin-right: 10px;
+   font-size: 2em;
+   transition: color 0.3s ease-in-out;
+ }
+
+ .icon:hover {
+   color: rgb(24, 24, 49) /* Replace with the color you want on hover */
  }

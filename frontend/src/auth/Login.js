@@ -2,10 +2,11 @@ import React, {useState} from 'react';
 import {  signInWithEmailAndPassword   } from 'firebase/auth';
 import { auth } from '../service/firebase';
 import { NavLink, useNavigate } from 'react-router-dom'
-import {MDBContainer, MDBCol, MDBRow, MDBBtn, MDBIcon, MDBInput, MDBCheckbox } from 'mdb-react-ui-kit';
+
 import Footer from '../components/Footer';
 import "../style/style.css";
 import learneaselogo from '../style/images/logo4.jpg';
+import l1 from '../style/images/l1.png'
 
 
 
@@ -35,7 +36,12 @@ const Login = () => {
 
   return (
    <div>
-    <div className='login-main-container'>
+    <section id="about-login">
+      <div className='login-img'>
+           <img src={l1} alt="" style={{ width: '500px', height: '400px' }}/>
+      </div>
+      <div className='login-text'>
+      <div className='login-main-container'>
     <div className="login-container">
       <div className="login-form-container">
         <img style={{width:"50%"}}className="logo" src={learneaselogo} alt="Logo" />
@@ -73,11 +79,15 @@ const Login = () => {
       </div>
     </div>
     </div>
+      </div>
+
+    </section>
     <Footer/>
     </div>
+
   );
 };
-
+export default Login;
 
 
 
@@ -170,4 +180,3 @@ const Login = () => {
 
 
  
-export default Login;

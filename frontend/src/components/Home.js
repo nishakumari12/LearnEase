@@ -3,7 +3,7 @@ import '../style/style.css';
 import Navigation from "./Navigation";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import Footer from "./Footer";
@@ -61,7 +61,7 @@ function Home(){
       </section>
       <HomeCourse/>
       {/*registration*/}
-      <section id="registration">
+      {/* <section id="registration">
         <div className="reminder">
           <p>Get 100 Online Courses for free</p>
           <h1>Register To Get It</h1>
@@ -90,7 +90,7 @@ function Home(){
               <input type="submit" />
             </div>
           </form></div>
-      </section>
+      </section> */}
       {/*profiles*/}
       <section id="experts">
         <h1>Community Experts</h1>
@@ -101,39 +101,39 @@ function Home(){
             <h6>Ema Irnik</h6>
             <p>Python Expert</p>
             <div className="pro-links">
-              <FontAwesomeIcon icon={faFacebook} style={{ color: "#4A4A88" }} />
-              <FontAwesomeIcon icon="fa-brands fa-instagram" style={{ color: "#4A4A88" }} />
-              <FontAwesomeIcon icon="fa-brands fa-linkedin" style={{ color: "#4A4A88" }} />
+              <FontAwesomeIcon icon={faFacebook} style={{ color: "#4A4A88", marginRight: "10px" }} size="xl"/>
+              <FontAwesomeIcon icon={faInstagram} style={{ color: "#4A4A88",marginRight: "10px"}} size="xl" />
+              <FontAwesomeIcon icon={faLinkedin} style={{ color: "#4A4A88" }} size="xl"/>
             </div>
           </div>
           <div className="profile">
-            <img src="/style/images/p3.jpg" alt="" />
+            <img src={p3Image} alt="" />
             <h6>Maalik</h6>
             <p>Full Stack Developer</p>
             <div className="pro-links">
-            <FontAwesomeIcon icon="fa-brands fa-facebook" style={{ color: "#4A4A88" }} />
-            <FontAwesomeIcon icon="fa-brands fa-instagram" style={{ color: "#4A4A88" }} />
-            <FontAwesomeIcon icon="fa-brands fa-linkedin" style={{ color: "#4A4A88" }} />
+            <FontAwesomeIcon icon={faFacebook} style={{ color: "#4A4A88", marginRight: "10px"}} size="xl"/>
+            <FontAwesomeIcon icon={faInstagram} style={{ color: "#4A4A88", marginRight: "10px" }} size="xl" />
+            <FontAwesomeIcon icon={faLinkedin} style={{ color: "#4A4A88" }} size="xl"/>
             </div>
           </div>
           <div className="profile">
-            <img src="/style/images/p4.jpg" alt="" />
+            <img src={p2Image} alt="" />
             <h6>Jennifer</h6>
             <p>Design Expert</p>
             <div className="pro-links">
-            <FontAwesomeIcon icon="fa-brands fa-facebook" style={{ color: "#4A4A88" }} />
-            <FontAwesomeIcon icon="fa-brands fa-instagram" style={{ color: "#4A4A88" }} />
-            <FontAwesomeIcon icon="fa-brands fa-linkedin" style={{ color: "#4A4A88" }} />
+            <FontAwesomeIcon icon={faFacebook} style={{ color: "#4A4A88", marginRight: "10px" }} size="xl"/>
+            <FontAwesomeIcon icon={faInstagram} style={{ color: "#4A4A88", marginRight: "10px" }} size="xl"/>
+            <FontAwesomeIcon icon={faLinkedin} style={{ color: "#4A4A88",  }} size="xl"/>
             </div>
           </div>
           <div className="profile">
-            <img src="/style/images/p2.jpg" alt="" />
+            <img src={p4Image} alt="" />
             <h6>Jason</h6>
             <p>Data Analysis Expert</p>
             <div className="pro-links">
-            <FontAwesomeIcon icon="fa-brands fa-facebook" style={{ color: "#4A4A88" }} />
-            <FontAwesomeIcon icon="fa-brands fa-instagram" style={{ color: "#4A4A88" }} />
-            <FontAwesomeIcon icon="fa-brands fa-linkedin" style={{ color: "#4A4A88" }} />
+            <FontAwesomeIcon icon={faFacebook} style={{ color: "#4A4A88", marginRight: "10px" }} size="xl"/>
+            <FontAwesomeIcon icon={faInstagram} style={{ color: "#4A4A88", marginRight: "10px" }} size="xl"/>
+            <FontAwesomeIcon icon={faLinkedin} style={{ color: "#4A4A88" }} size="xl" />
             </div>
           </div>
         </div>
